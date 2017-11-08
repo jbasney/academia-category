@@ -1,5 +1,5 @@
 
-The Academia Entity Catagory
+The Academic Institution Entity Category
 =======================
 
 1. Overview
@@ -12,20 +12,23 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 2. Definition
 ----------------
 
-An identity provider MUST NOT be annotated with the academia entity category unless the identity provider is being operated by (or on behalf of and by contract with) at least one organisation, represented by a legal entity in good standing in the community of other academic institutions, that fulfills at least one of the criteria below:
+In order to be annotated with the Academia Entity Category, an identity provider MUST be operated
+* by or
+* on behalf of and by contract with
+at least one organisation, represented by a legal entity in good standing in the community of other academic institutions, that fulfills at least one of the criteria below:
 
 1. the organization is dedicated to education and research and which grants academic degrees at level 6 (or higher) according to ISCED 2011 [ISCED] or equivalent internationally recognized academic degree levels.
 2. the organization is a research library or archive
 3. the organization is primarily dedicated to conducting research
 4. the organization is a teaching hospital
-5. any organization explicitly denoted as an acedemic institution by a goverment entity in the jurisdiction where the claim of being an academic institution is made
+5. any organization explicitly denoted as an academic institution by a government entity in the jurisdiction where the claim of being an academic institution is made
 
 Note that the funding mechanism (private, public or mixed) is not a factor in the definition of an academic institution. For instance, privately funded research institutions are eligible for this entity category if they fulfill at least one of the criteria above.
 
 3. Syntax
 ---------
 
-The following URI is used as the attribute value for the Entity Category and Entity Category Support attribute: http://refeds.org/category/academia
+The following URI is used as the attribute value for the Entity Category and Entity Category Support attribute: http://refeds.org/category/academic_institution
 
 4. Semantics
 ------------
@@ -35,12 +38,12 @@ By asserting an identity provider to be a member of the academia entity category
 - To allow metadata consumers (e.g. a discovery service) to filter on identity providers representing one or more academic institutions
 - To allow relying parties a way to decide how to interpret the values of the eduPersonScopedAffiliation and eduPersonAffiliation attributes.
 
-Specifically a relying party SHOULD NOT assume that an attribute assertion received from an identity provider with the academia entity category represents a Subject (as defined in [TBD]) with any particular affiliation to the organization on behalf of which the identity provider is operated. Conversely, the absense of the academia category does not mean that the identity provider does not in fact represent one or more academic institution.
+Specifically a relying party SHOULD NOT assume that an attribute assertion received from an identity provider with the academia entity category represents a Subject (as defined in [SAMLCore]) with any particular affiliation to the organization on behalf of which the identity provider is operated. Conversely, the absense of the academia category does not mean that the identity provider does not in fact represent one or more academic institution.
 
 5. References
 -------------
 
-[ISCED] ISCED 2011, http://www.uis.unesco.org/ISCED
+[ISCED] ISCED 2011, http://uis.unesco.org/en/topic/international-standard-classification-education-isced
 
 [AcademicInstitutionWikipedia] http://en.wikipedia.org/wiki/Academic_institution
 
@@ -48,4 +51,4 @@ Specifically a relying party SHOULD NOT assume that an attribute assertion recei
 
 [RFC2119] Bradner, S., "Key words for use in RFCs to Indicate Requirement Levels", BCP 14, RFC 2119, March 1997.
 
-[TBD] insert saml reference here for Subject
+[SAMLCore] S. Cantor et al., "Assertions and Protocols for the OASIS Security Assertion Markup Language (SAML) V2.0", OASIS SSTC, March 2005, Document ID samlcore-2.0-os. See http://www.oasis-open.org/committees/security/.
